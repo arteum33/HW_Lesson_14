@@ -49,7 +49,7 @@ for name in name_reviews:
 g = list(map(list, zip(all_dates, all_names, all_reviews)))
 # print(g, type(g))
 i = 0
-with open('names.csv', 'w', newline='') as file:
+with open('data_reviews.csv', 'w', newline='') as file:
     writer = csv.writer(file, delimiter=';')
     writer.writerow(['ИСТОЧНИК ИНФОРМАЦИИ: ', URL])
     writer.writerow(['ОТЗЫВЫ О КОМПАНИИ: ', art])
