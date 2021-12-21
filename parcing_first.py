@@ -3,6 +3,7 @@ import requests
 import re
 import itertools
 import csv
+import xlsxwriter
 
 # парсинг данных со стораницы отзывов
 URL = 'https://mooc.ru/company/neural-university/reviews'
@@ -50,6 +51,7 @@ g = list(map(list, zip(all_dates, all_names, all_reviews)))
 # print(g, type(g))
 
 # запись данных в CSV-файл
+
 with open('data_reviews.csv', 'w', newline='') as file:
     writer = csv.writer(file, delimiter=';')
     writer.writerow(['ИСТОЧНИК ИНФОРМАЦИИ: ', URL])
@@ -57,5 +59,5 @@ with open('data_reviews.csv', 'w', newline='') as file:
     writer.writerow(['ДАТА', 'АВТОР', 'ОТЗЫВ'])
     for item in g:
         writer.writerows([item])
-import openpyxl
-from string import ascii_uppercase
+
+
