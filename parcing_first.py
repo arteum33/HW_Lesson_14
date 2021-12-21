@@ -22,7 +22,6 @@ for hd in headline:
     art = str(hd.text)
 
 
-
 # создание списков
 all_reviews = []
 all_dates = []
@@ -45,9 +44,12 @@ for name in name_reviews:
     all_names.append(n)
 # print(all_names)
 
+
+# Создание списка списков
 g = list(map(list, zip(all_dates, all_names, all_reviews)))
 # print(g, type(g))
-i = 0
+
+# запись данных в CSV-файл
 with open('data_reviews.csv', 'w', newline='') as file:
     writer = csv.writer(file, delimiter=';')
     writer.writerow(['ИСТОЧНИК ИНФОРМАЦИИ: ', URL])
